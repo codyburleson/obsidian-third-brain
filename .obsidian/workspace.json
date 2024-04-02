@@ -118,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Untitled.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -137,8 +135,7 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "3rd-brain-plugin:Sample Plugin": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "1ae9be7e26f7c768",

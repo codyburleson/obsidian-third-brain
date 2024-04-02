@@ -1,11 +1,11 @@
 {
-	"id": "3rd-brain-plugin",
-	"name": "3rd Brain",
+	"id": "third-brain-plugin",
+	"name": "Third Brain",
 	"version": "1.0.0",
 	"minAppVersion": "1.5.12",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Personal and professional knowledge management enhanced with A.I.",
+	"author": "Cody Burleson",
+	"authorUrl": "https://codyburleson.com",
+	"fundingUrl": "https://buymeacoffee.com/cburleson",
 	"isDesktopOnly": false
 }
