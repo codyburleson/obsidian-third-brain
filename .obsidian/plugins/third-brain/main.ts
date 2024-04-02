@@ -1,5 +1,6 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin } from 'obsidian';
 import { ThirdBrainPluginSettingsTab } from './settings'
+import { TestAgent } from './agent'
 
 // Remember to rename these classes and interfaces!
 
@@ -16,6 +17,8 @@ export default class ThirdBrainPlugin extends Plugin {
 
 	async onload() {
 		await this.loadSettings();
+
+        console.log(this.settings.openAiApiKey);
 
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
@@ -37,6 +40,22 @@ export default class ThirdBrainPlugin extends Plugin {
 				new SampleModal(this.app).open();
 			}
 		});
+
+        		// This adds a simple command that can be triggered anywhere
+		this.addCommand({
+			id: 'test-agent',
+			name: 'Test Agent',
+			callback: async () => {
+
+                const agent = new TestAgent(this);				
+                const response = await agent.execute(
+                    "Please suggest some activities based on my location and the weather."
+                );
+                   
+                console.log("response:", response);
+			}
+		});
+
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: 'sample-editor-command',
